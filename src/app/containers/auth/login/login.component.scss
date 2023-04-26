@@ -1,0 +1,56 @@
+.container {
+    margin: 10% 20%;
+    border: 3px solid #f1f1f1;
+    padding: 10px;
+
+    .header-text {
+        text-align: center;
+    }
+
+    form {
+        padding: 10px;
+
+        input {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+       
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        small {
+            color: red;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+
+    .container {
+        margin: 10px 5px;
+    }
+}

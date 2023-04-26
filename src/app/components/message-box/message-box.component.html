@@ -1,0 +1,8 @@
+<h2 mat-dialog-title align="center" >{{ data.title | titlecase}}</h2>
+
+<mat-dialog-content align="center" class="mat-typography"> {{data.message | titlecase}} </mat-dialog-content>
+
+<mat-dialog-actions align="center">
+  <button mat-button mat-dialog-close *ngIf="!data.path"> {{ data.actionName }}</button>
+  <button mat-button  [mat-dialog-close]="true" color="primary" *ngIf="data.path" [routerLink]="data.path" cdkFocusInitial> {{data.actionName}} </button>
+</mat-dialog-actions>
