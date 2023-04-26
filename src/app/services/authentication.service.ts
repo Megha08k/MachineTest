@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class AuthenticationService {
   readonly token :string = 'eyJwYXNzd29yZCI6IjhlZDQ2ZDgifQ';
+  public isLoggedIn: boolean = false;
   constructor() { }
 
   setToken(key:string){
@@ -17,5 +18,5 @@ export class AuthenticationService {
 
   removeToken(key:string){
     localStorage.removeItem(key);
-  }
+  }  
 }

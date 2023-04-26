@@ -7,12 +7,14 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MessageBoxComponent } from './components/message-box/message-box.component';
 import { SharedModule } from './shared/shared.module';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
-    MessageBoxComponent
+    MessageBoxComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
