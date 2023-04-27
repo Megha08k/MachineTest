@@ -18,7 +18,7 @@
                     <b>Price:</b><span style="color:darkgreen"> {{ book.price | currency:'INR'}}</span>   
                 </div>
             </mat-card-content>
-            <mat-card-actions>
+            <mat-card-actions style="text-align:center">
               <button mat-stroked-button  style="color:darkgreen" (click)="onAddBook(book)">Update</button>
               <button mat-stroked-button color="warn" (click)="onRemove(i)">Remove</button>
             </mat-card-actions>
