@@ -61,7 +61,7 @@ const modules = [
   MatMenuModule,
   MatPaginatorModule,
   MatProgressBarModule,
-  MatCardModule,
+  MatCardModule,//Used
   MatTableModule,
   MatTabsModule,
   MatSliderModule,

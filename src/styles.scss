@@ -14,14 +14,14 @@ $customer-portal-accent: mat.define-palette(
 
 // The warn palette is optional (defaults to red).
 $customer-portal-warn: mat.define-palette(mat.$red-palette);
-
-
+$customer-portal-green : mat.define-palette(mat.$green-palette);
 $customer-portal-theme: mat.define-light-theme(
   (
     color: (
       primary: $customer-portal-primary,
       accent: $customer-portal-accent,
       warn: $customer-portal-warn,
+      succes: $customer-portal-green
     ),
   )
 );

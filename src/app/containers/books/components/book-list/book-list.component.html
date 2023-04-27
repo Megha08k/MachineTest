@@ -1,1 +1,27 @@
-
+<div class="btn-add">
+    <p><strong>Click here to add books!</strong></p>    
+    <button mat-stroked-button color="primary" (click)="onAddBook(book)">+ Add Books</button>
+</div>
+<div class="card-data">
+    <ng-container *ngFor="let book of bookService.bookList; let i = index">
+        <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>{{ book.title | titlecase }}</mat-card-title>
+              <mat-card-subtitle>{{ book.author | titlecase }}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="./assets/mcj038257400001.jpg" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <div class="content">
+                    <b>Published Date:</b><span> {{ book.published_Date }}</span>   
+                </div>
+                <div class="content">
+                    <b>Price:</b><span style="color:darkgreen"> {{ book.price | currency:'INR'}}</span>   
+                </div>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-stroked-button  style="color:darkgreen" (click)="onAddBook(book)">Update</button>
+              <button mat-stroked-button color="warn" (click)="onRemove(i)">Remove</button>
+            </mat-card-actions>
+          </mat-card>
+    </ng-container>
+</div>

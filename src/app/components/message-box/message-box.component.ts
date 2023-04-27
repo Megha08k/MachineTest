@@ -12,7 +12,6 @@ export class MessageBoxComponent implements OnInit {
   constructor(@Inject(MAT_DIALOG_DATA) readonly data: MessageBox) { }
 
   ngOnInit(): void {
-console.log(this.data);
   }
 
 }

@@ -3,27 +3,28 @@
         "book_Id":"B1",
         "title":"rich dad poor dad",
         "author":"Robert Kiyosaki and Sharon Lechter",
-        "published date":"23/04/2023",
+        "published_Date":"23/04/2023",
         "price":4500
     },
     {
         "book_Id":"B2",
         "title":"The India Story",
         "author":"Bimal Jalal",
-        "published date":"23/04/2023",
+        "published_Date":"23/04/2023",
         "price":550
-    },    {
+    },    
+    {
         "book_Id":"B3",
         "title":"A Place Called Home",
         "author":"Preeti Shenoy",
-        "published date":"23/04/2023",
+        "published_Date":"23/04/2023",
         "price":400
     },
     {
         "book_Id":"B4",
         "title":"Fearless Governance",
         "author":"Dr. Kiran Bedi",
-        "published date":"23/04/2023",
+        "published_Date":"23/04/2023",
         "price":4100
     }
 ]

@@ -1,0 +1,20 @@
+.btn-add{
+    margin: 10px;
+    text-align: center;
+}
+
+.card-data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .example-card {
+        max-width: 300px;
+        margin: 10px;
+
+        .content{
+            margin: 10px;
+        }
+    }
+}

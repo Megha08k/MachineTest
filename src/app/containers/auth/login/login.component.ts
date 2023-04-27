@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
-import { MessageBoxComponent } from 'src/app/components/message-box/message-box.component';
 import { MessageBox } from 'src/app/model/messageBox';
 import { AuthenticationService } from 'src/app/services/authentication.service';
+import { GenericService } from 'src/app/services/generic.service';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +17,7 @@ export class LoginComponent implements OnInit {
   loginMessage:MessageBox = {title: 'congratulations', message : 'you have successfully logged in!', path: 'book', actionName: 'my books'};
   unauthorisedMessage:MessageBox = {title: 'error', message : 'error found!', path: '', actionName:'close'};
 
-  constructor(private fb : FormBuilder, private authService : AuthenticationService, private dialog : MatDialog) { }
+  constructor(private fb : FormBuilder, private authService : AuthenticationService, private genericService: GenericService) { }
 
   ngOnInit(): void {
     this.setForm();
@@ -37,19 +36,12 @@ export class LoginComponent implements OnInit {
 
   onAuthenticateUser(){
       const user = this.loginForm.value;
-      if(this.userDetails.email.includes(user.userName) && this.userDetails.password.includes(user.password)){
+      if(this.userDetails.email === user.userName && this.userDetails.password === user.password){
           this.authService.setToken('token');
-          this.openMessage(this.loginMessage);
+          this.genericService.openMessage(this.loginMessage);
       }else{
-          this.openMessage(this.unauthorisedMessage);
+          this.genericService.openMessage(this.unauthorisedMessage);
       }
-  }
-
-  openMessage(data:MessageBox){
-    this.dialog.open(MessageBoxComponent, {
-      data: data,
-      width: '600px',
-    });
   }
 
 }
