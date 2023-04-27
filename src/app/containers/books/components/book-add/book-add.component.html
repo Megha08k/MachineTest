@@ -20,7 +20,7 @@
       <div>
         <mat-form-field appearance="outline">
           <mat-label>Purchased Date</mat-label>
-          <input matInput placeholder="Placeholder" formControlName="purchasedDate">
+          <input matInput placeholder="MM/DD/YYYY" formControlName="purchasedDate">
           <mat-icon matSuffix>date_range</mat-icon>
           <mat-hint *ngIf="isFieldValid('purchasedDate')" style="color: red;">*Required</mat-hint>
         </mat-form-field>
